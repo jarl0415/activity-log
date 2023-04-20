@@ -3,9 +3,7 @@
 namespace Jarl\ActivityLog\Http\Traits;
 
 use Spatie\Activitylog\LogOptions;
-use Spatie\Activitylog\Models\Activity;
 use Spatie\Activitylog\Traits\LogsActivity;
-use function Jarl\ActivityLog\Traits\Auth;
 
 trait LogsActivityTrait
 {
@@ -15,17 +13,16 @@ trait LogsActivityTrait
 
     protected function getDescriptionForEvent(string $eventName): string
     {
-
         $description = '';
         switch ($eventName) {
             case 'created':
-                $description = '管理员' . Auth('admin')->user()->username . '添加了' . $this->table.'表id为' . $this->id . '的数据';
+                $description = '管理员' . Auth('admin')->user()->username . '添加了' . $this->table . '表id为' . $this->id . '的数据';
                 break;
             case 'updated':
-                $description = '管理员' . Auth('admin')->user()->username . '修改了' . $this->table.'表id为' . $this->id . '的数据';
+                $description = '管理员' . Auth('admin')->user()->username . '修改了' . $this->table . '表id为' . $this->id . '的数据';
                 break;
             case 'deleted':
-                $description = '管理员' . Auth('admin')->user()->username . '删除了' . $this->table.'表id为' . $this->id . '的数据';
+                $description = '管理员' . Auth('admin')->user()->username . '删除了' . $this->table . '表id为' . $this->id . '的数据';
                 break;
         }
         return $description;

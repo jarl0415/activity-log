@@ -3,16 +3,15 @@
 namespace Jarl\ActivityLog;
 
 use Dcat\Admin\Extend\ServiceProvider;
-use Dcat\Admin\Admin;
 
 class ActivityLogServiceProvider extends ServiceProvider
 {
-	protected $js = [
+    protected $js = [
         'js/jquery.json-viewer.js',
     ];
-	protected $css = [
-		'css/jquery.json-viewer.css',
-	];
+    protected $css = [
+        'css/jquery.json-viewer.css',
+    ];
 
     // 定义菜单
     protected $menu = [
