@@ -1,9 +1,8 @@
 {
     "name": "jarl/activity-log",
-    "alias": "",
     "description": "基于laravel-activitylog的操作日志扩展",
     "type": "library",
-    "keywords": ["dcat-admin", "extension", "activity-log"],
+    "keywords": ["laravel", "dcat-admin", "extension", "activity-log"],
     "homepage": "https://github.com/jarl/activity-log",
     "license": "MIT",
     "authors": [
@@ -15,7 +14,7 @@
     "require": {
         "php": ">=7.1.0",
         "dcat/laravel-admin": "~2.0",
-        "spatie/laravel-activitylog": "4.0.0"
+        "spatie/laravel-activitylog": "4.0.*"
     },
     "autoload": {
         "psr-4": {
