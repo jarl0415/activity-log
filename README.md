@@ -25,15 +25,16 @@ php artisan vendor:publish --provider="Spatie\Activitylog\ActivitylogServiceProv
 
 ### 使用
 
-在想要记录的模型类中使用引入`Jarl\ActivityLog\Traits\LogsActivityTrait`
+在想要记录的模型类中使用引入`Jarl\ActivityLog\Http\Traits\LogsActivityTrait`
 ```php
 use LogsActivityTrait;
 ```
 修改`activitylog.php`配置文件里的`default_auth_driver`属性为你定义的guard，一般后台是`admin`，前台是`web`,否则生成的日志`causer_type`和`causer_id`为`null`。
 
 如果你添加了其他字段比如ip字段，可在模型里定义`tapActivity`方法,该方法可修改任意字段。
+
 ```php
-use Jarl\ActivityLog\Traits\LogsActivityTrait;
+use Jarl\ActivityLog\Http\Traits\LogsActivityTrait;
 use Spatie\Activitylog\Models\Activity;
 ......
 

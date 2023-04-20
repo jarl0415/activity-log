@@ -3,7 +3,7 @@
 return [
     '1.0.0' => [
         'Initialize extension.',
-        'test',
+        'Initialize extension.',
         'create_activity_log_table.php',
     ],
 ];

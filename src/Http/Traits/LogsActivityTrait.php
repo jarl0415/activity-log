@@ -1,10 +1,11 @@
 <?php
 
-namespace Jarl\ActivityLog\Traits;
+namespace Jarl\ActivityLog\Http\Traits;
 
 use Spatie\Activitylog\LogOptions;
 use Spatie\Activitylog\Models\Activity;
 use Spatie\Activitylog\Traits\LogsActivity;
+use function Jarl\ActivityLog\Traits\Auth;
 
 trait LogsActivityTrait
 {
