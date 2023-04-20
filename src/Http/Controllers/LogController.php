@@ -8,7 +8,6 @@ use Dcat\Admin\Layout\Content;
 use Dcat\Admin\Admin;
 use Illuminate\Routing\Controller;
 use Jarl\ActivityLog\ActivityLogServiceProvider;
-use Dcat\Admin\OperationLog\Models\OperationLog;
 use Jarl\ActivityLog\Models\ActivityLog;
 
 class LogController extends Controller
@@ -23,9 +22,6 @@ class LogController extends Controller
 
     protected function grid()
     {
-        // json格式化显示
-//        Admin::css('vendor/dcat-admin/dcat/css/jquery.json-viewer.css');
-//        Admin::js('vendor/dcat-admin/dcat/js/jquery.json-viewer.js');
         Admin::requireAssets('@jarl.activity-log');
         Admin::script(
             <<<JS
@@ -68,7 +64,7 @@ JS
     {
         $ids = explode(',', $id);
 
-        OperationLog::destroy(array_filter($ids));
+        ActivityLog::destroy(array_filter($ids));
 
         return JsonResponse::make()
             ->success(trans('admin.delete_succeeded'))
