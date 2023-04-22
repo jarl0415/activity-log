@@ -47,3 +47,18 @@ class User extends Model{
 }
 
 ```
+### 说明
+
+本项目基于 [spatie/laravel/activity-log](https://github.com/spatie/laravel-activitylog) 项目，如涉及侵权问题麻烦联系本人删除该项目
+
+### 感谢
+
+- [dcat-admin](https://github.com/jqhph/dcat-admin)
+- [spatie/laravel/activity-log](https://github.com/spatie/laravel-activitylog)
+
+
+
+License
+------------
+
+Licensed under [The MIT License (MIT)](LICENSE).
