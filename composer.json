@@ -14,7 +14,7 @@
     "require": {
         "php": ">=7.1.0",
         "dcat/laravel-admin": "~2.0",
-        "spatie/laravel-activitylog": "4.0.*"
+        "spatie/laravel-activitylog": "4.*"
     },
     "autoload": {
         "psr-4": {
